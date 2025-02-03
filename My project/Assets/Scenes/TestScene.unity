@@ -403,9 +403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaaa319d56ff6c240b95e505a10cc158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RadiusFromFish: 2
-  tf: {fileID: 0}
-  mousePos: {x: 0, y: 0}
 --- !u!212 &1992870144
 SpriteRenderer:
   m_ObjectHideFlags: 0
