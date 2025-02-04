@@ -1,3 +1,3 @@
 # GamerDevProject1
 
-Shark Sprite by @RAPIDPUNCHES on OpenGameArt.org
+Shark Sprite found on OpenGameArt.org
