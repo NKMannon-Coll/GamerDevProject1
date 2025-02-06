@@ -1,6 +1,6 @@
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class DataWriter : MonoBehaviour
 {
 
@@ -11,12 +11,24 @@ public class DataWriter : MonoBehaviour
     void Start()
     {
         WriteScores();
+        if (DataManager.Instance.firstScreen)
+        {
+            DisableInputField();
+            DataManager.Instance.firstScreen = false;
+        }
+        else 
+        {
+            InputField.active = true;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Return)) 
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 
     public void AddScore() 

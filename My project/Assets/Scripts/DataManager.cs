@@ -27,20 +27,22 @@ public class DataManager : MonoBehaviour
 
     private int lastScore = 0;
 
-    
+    public bool firstScreen = true;
 
     //[SerializeField] private TextMeshProUGUI nb;
 
 
     private void Awake()
     {
-        if (Instance = null) 
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
         {
             Destroy(gameObject);
-            return;
         }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
         WriteData();
         LoadData();
     }
