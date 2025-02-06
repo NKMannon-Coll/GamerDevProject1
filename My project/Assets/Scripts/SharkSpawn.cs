@@ -13,14 +13,23 @@ public class SharkSpawn : MonoBehaviour
     }
 
     IEnumerator Sharks()
+{
+    for (;;)
     {
-        for (;;)
-        {
-            Vector3 spawnPosition = GetRandomEdgePosition();
-            Instantiate(shark, spawnPosition, Quaternion.identity);
-            yield return new WaitForSeconds(Random.Range(1.5f, 3f));
-        }
+        Vector3 spawnPosition = GetRandomEdgePosition();
+        Instantiate(shark, spawnPosition, Quaternion.identity);
+
+        // Base spawn delay range
+        float minDelay = 0.5f;
+        float maxDelay = 2f;
+
+        // Adjust delay based on score 
+        float difficultyMultiplier = Mathf.Clamp(1f - (GameManager.Instance.score * 0.02f), 0.2f, 1f);
+        float spawnDelay = Random.Range(minDelay, maxDelay) * difficultyMultiplier;
+
+        yield return new WaitForSeconds(spawnDelay);
     }
+}
 
     Vector3 GetRandomEdgePosition()
     {
