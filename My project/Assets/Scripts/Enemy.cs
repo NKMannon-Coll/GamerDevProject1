@@ -14,6 +14,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    /*private void OnParticleTrigger(GameObject collision)
+    {
+        
+    }*/
 
-    
+
+
 }
