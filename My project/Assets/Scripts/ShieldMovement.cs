@@ -13,6 +13,8 @@ public class ShieldMovement : MonoBehaviour
     private Transform tf;
     private Vector2 mousePos;
 
+    [SerializeField] private GameObject UI;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,7 +33,7 @@ public class ShieldMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col){
         if (col.gameObject.tag == "Fish"){
             Destroy(col.gameObject);
-            GameManager.Instance.IncScore();
+            UI.GetComponent<UIWriter>().IncreaseScore();
         }
     }
 }

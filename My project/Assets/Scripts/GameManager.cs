@@ -1,13 +1,14 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public TextMeshProUGUI scoreText;
+    //public TextMeshProUGUI scoreText;
 
-    private int score = 0;
+    public int score = 0;
 
     void Awake()
     {
@@ -26,7 +27,14 @@ public class GameManager : MonoBehaviour
     public void IncScore() 
     {
         score++;
-        scoreText.text = "Sharks: " + score;
+        //scoreText.text = "Sharks: " + score;
+    }
+
+    public void ResetGame() 
+    {
+        SceneManager.LoadScene("ScorePage");
+        DataManager.Instance.NewScore(score);
+        score = 0;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
