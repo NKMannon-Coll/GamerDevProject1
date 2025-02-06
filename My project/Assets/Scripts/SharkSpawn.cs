@@ -5,7 +5,7 @@ public class SharkSpawn : MonoBehaviour
 {
     public GameObject shark;
     public Camera mainCamera; 
-    public float spawnOffset = 1f; 
+    public float spawnOffset = .5f; 
 
     void Start()
     {

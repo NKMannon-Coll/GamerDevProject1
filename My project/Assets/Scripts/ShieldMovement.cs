@@ -8,7 +8,7 @@ using Vector3 = UnityEngine.Vector3;
 public class ShieldMovement : MonoBehaviour
 {
 
-    private float RadiusFromFish = 2;
+    private float RadiusFromFish = 1;
 
     private Transform tf;
     private Vector2 mousePos;
