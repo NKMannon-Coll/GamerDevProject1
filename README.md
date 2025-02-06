@@ -6,6 +6,11 @@ Background from itch.io made by ansimuz from their [underwater fantasy pixel are
 
 Car sprite from itch.io [Free 2D vehicle](https://overcrafted.itch.io/free-paid-vehicle-car-sprites-)
 
+Fish Sprite From Kenney Games Fish Pack - [https://kenney.nl/assets/fish-pack]
+
+Bubble Sprite from [https://opengameart.org/content/bubble-0]
+
+Bubble sound from [https://freesound.org/search/?q=bubble&f=grouping_pack%3A%2231877_Bubbles_pack%22]
 
 the name of your game
 the intent of your game
